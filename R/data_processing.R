@@ -73,14 +73,14 @@ process_gene_data <- function(gene_data, location_data = NULL) {
   if (is.null(location_data)) {
     # Try to load from package first, fallback to global environment
     tryCatch({
-      data("gene_location", package = "GeneCytoM", envir = environment())
+      data("gene_location", package = "FOCUS", envir = environment())
       location_data <- gene_location
     }, error = function(e) {
       # Fallback to global environment if package not properly installed
       if (exists("gene_location")) {
         location_data <- get("gene_location")
       } else {
-        stop("gene_location data not found. Please ensure GeneCytoM package is properly installed.")
+        stop("gene_location data not found. Please ensure FOCUS package is properly installed.")
       }
     })
   }

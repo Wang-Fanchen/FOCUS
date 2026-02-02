@@ -1,6 +1,6 @@
-# GeneCytoM: Multimodal Gene-to-Cytoband Profiling
+# FOCUS: Feature-Oriented Cytoband Unveiling System
 
-[![R package version](https://img.shields.io/badge/Version-0.2.0-blue.svg)](https://github.com/Wang-Fanchen/GeneCytoM)
+[![R package version](https://img.shields.io/badge/Version-0.2.0-blue.svg)](https://github.com/Wang-Fanchen/FOCUS)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![R](https://img.shields.io/badge/R-%3E%3D%203.5.0-blue.svg)](https://www.r-project.org/)
 
@@ -10,13 +10,13 @@
 
 ## 📖 Overview
 
-**GeneCytoM** (Gene-Cytoband-Multimodal) is designed for researchers working with **multimodal machine learning models** that integrate gene expression and imaging data (e.g., histopathology images). 
+**FOCUS** (Feature-Oriented Cytoband Unveiling System) is designed for researchers working with **multimodal machine learning models** that integrate gene expression and imaging data (e.g., histopathology images). 
 
 The package helps answer a critical question:
 
 > *"Which genes and chromosomal regions show improved prediction importance when we add imaging data to gene-only models?"*
 
-### What GeneCytoM Does
+### What FOCUS Does
 
 1. **Identifies multimodal-advantaged genes**: Genes where the multimodal model (gene + image) assigns higher importance than the gene-only model
 2. **Maps genes to cytobands**: Automatically locates genes on chromosomal cytobands using built-in reference data
@@ -52,10 +52,10 @@ This package is particularly useful for:
 
 ```r
 # Method 1: Install from GitHub
-devtools::install_github("Wang-Fanchen/GeneCytoM")
+devtools::install_github("Wang-Fanchen/FOCUS")
 
 # Method 2: Install from local source
-devtools::install("path/to/GeneCytoM")
+devtools::install("path/to/FOCUS")
 ```
 
 **Required dependencies:**
@@ -72,7 +72,7 @@ BiocManager::install(c("karyoploteR", "GenomicRanges", "regioneR"))
 ### Basic Usage
 
 ```r
-library(GeneCytoM)
+library(FOCUS)
 
 # Run complete analysis (one line!)
 results <- run_cytoband_analysis(
@@ -106,7 +106,7 @@ head(results$cytoband_summary)
 
 ### Understanding the Column Names
 
-GeneCytoM uses a clear naming convention:
+FOCUS uses a clear naming convention:
 - **G suffix** = Gene-only model metrics
 - **M suffix** = Multimodal model metrics (gene + image)
 
@@ -157,7 +157,7 @@ MYC,0.678,0.891,-0.345,0.567,0.0005,0.0001
 ### Example 1: Basic Analysis (No P-value Filtering)
 
 ```r
-library(GeneCytoM)
+library(FOCUS)
 
 # Identify genes where multimodal > gene-only
 results <- run_cytoband_analysis(
@@ -220,7 +220,7 @@ advantaged <- cytoband_stats[cytoband_stats$Difference > 0, ]
 
 ## 📊 Output Files
 
-GeneCytoM generates a comprehensive set of outputs organized in your specified directory:
+FOCUS generates a comprehensive set of outputs organized in your specified directory:
 
 ### 📁 Directory Structure
 
@@ -317,9 +317,9 @@ run_cytoband_analysis(
    write.csv(gene_importance, "BRCA_comparison.csv")
    ```
 
-3. **Run GeneCytoM**:
+3. **Run FOCUS**:
    ```r
-   library(GeneCytoM)
+   library(FOCUS)
    
    results <- run_cytoband_analysis(
      input_file = "BRCA_comparison.csv",
@@ -356,7 +356,7 @@ run_cytoband_analysis(
 
 ### Four Sorting Strategies
 
-GeneCytoM provides **4 different ways** to rank and visualize cytobands:
+FOCUS provides **4 different ways** to rank and visualize cytobands:
 
 | Sorting Method | When to Use | Highlights |
 |----------------|-------------|------------|
@@ -435,7 +435,7 @@ Consider these questions:
 
 We welcome contributions! Ways to contribute:
 
-1. **Report bugs**: [GitHub Issues](https://github.com/Wang-Fanchen/GeneCytoM/issues)
+1. **Report bugs**: [GitHub Issues](https://github.com/Wang-Fanchen/FOCUS/issues)
 2. **Request features**: Describe your use case in an issue
 3. **Submit pull requests**: 
    - Fork the repository
@@ -447,8 +447,8 @@ We welcome contributions! Ways to contribute:
 
 ```r
 # Clone repository
-git clone https://github.com/Wang-Fanchen/GeneCytoM.git
-cd GeneCytoM
+git clone https://github.com/Wang-Fanchen/FOCUS.git
+cd FOCUS
 
 # Install development dependencies
 devtools::install_dev_deps()
@@ -464,14 +464,14 @@ devtools::test()
 
 ## 📄 Citation
 
-If you use GeneCytoM in your research, please cite:
+If you use FOCUS in your research, please cite:
 
 ```bibtex
-@software{genecytom2025,
-  title = {GeneCytoM: Multimodal Gene-to-Cytoband Profiling},
+@software{focus2025,
+  title = {FOCUS: Feature-Oriented Cytoband Unveiling System},
   author = {Wang, Fanchen},
   year = {2025},
-  url = {https://github.com/Wang-Fanchen/GeneCytoM},
+  url = {https://github.com/Wang-Fanchen/FOCUS},
   version = {0.2.0},
   note = {R package for comparing multimodal and gene-only AI models}
 }
@@ -481,8 +481,8 @@ If you use GeneCytoM in your research, please cite:
 
 ## 📞 Support & Contact
 
-- **GitHub Issues**: [Report bugs or request features](https://github.com/Wang-Fanchen/GeneCytoM/issues)
-- **Documentation**: Run `?GeneCytoM` or `?run_cytoband_analysis` in R
+- **GitHub Issues**: [Report bugs or request features](https://github.com/Wang-Fanchen/FOCUS/issues)
+- **Documentation**: Run `?FOCUS` or `?run_cytoband_analysis` in R
 - **Email**: wang.fanchen@outlook.com
 
 ---
@@ -534,13 +534,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [ ] Statistical significance testing for cytobands
 - [ ] Web-based interface (Shiny app)
 
-**Have suggestions?** [Open an issue](https://github.com/Wang-Fanchen/GeneCytoM/issues) with your ideas!
+**Have suggestions?** [Open an issue](https://github.com/Wang-Fanchen/FOCUS/issues) with your ideas!
 
 ---
 
 <div align="center">
 
-**⭐ If you find GeneCytoM useful, please star the repository! ⭐**
+**⭐ If you find FOCUS useful, please star the repository! ⭐**
 
 Made with ❤️ for the multimodal AI and cancer genomics community
 

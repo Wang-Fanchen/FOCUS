@@ -1,6 +1,6 @@
-Package: GeneCytoM
+Package: FOCUS
 Type: Package
-Title: Multimodal Gene-to-Cytoband Profiling
+Title: Feature-Oriented Cytoband Unveiling System
 Version: 0.2.0
 Authors@R:
     person(given = "Your",
@@ -37,5 +37,5 @@ Suggests:
     devtools,
     roxygen2
 VignetteBuilder: knitr
-URL: https://github.com/yourusername/GeneCytoM
-BugReports: https://github.com/yourusername/GeneCytoM/issues
+URL: https://github.com/Wang-Fanchen/FOCUS
+BugReports: https://github.com/Wang-Fanchen/FOCUS/issues

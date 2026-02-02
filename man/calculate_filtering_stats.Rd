@@ -8,7 +8,8 @@ calculate_filtering_stats(
   processed_data,
   candidates,
   comparison_filter,
-  pvalue_threshold
+  pvalue_threshold_g = NULL,
+  pvalue_threshold_m = NULL
 )
 }
 \arguments{
@@ -18,7 +19,9 @@ calculate_filtering_stats(
 
 \item{comparison_filter}{Comparison filter used}
 
-\item{pvalue_threshold}{P-value threshold used}
+\item{pvalue_threshold_g}{P-value threshold used for P.Value.G}
+
+\item{pvalue_threshold_m}{P-value threshold used for P.Value.M}
 }
 \value{
 List with detailed statistics

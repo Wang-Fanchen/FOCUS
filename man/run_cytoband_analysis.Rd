@@ -62,9 +62,7 @@ This function executes the complete analysis pipeline:
 
 The input CSV file must contain these required columns:
 Gene, Local.Index.G, Local.Index.M, Attribution.G, Attribution.M
-
-Optional columns:
-P.Value.G, P.Value.M
+Optional columns: P.Value.G, P.Value.M
 }
 \examples{
 \dontrun{

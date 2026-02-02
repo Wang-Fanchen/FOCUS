@@ -19,7 +19,7 @@
 #'
 #' @details
 #' This dataset provides essential chromosomal location information for
-#' human genes and is used throughout the GeneCytoM package for:
+#' human genes and is used throughout the FOCUS package for:
 #' \itemize{
 #'   \item Matching genes to their chromosomal locations
 #'   \item Creating chromosome ideograms
