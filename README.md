@@ -1,4 +1,4 @@
-# FOCUS: Feature-Oriented Cytoband Unveiling System
+# FOCUS: Feature-Oriented Cytoband Universal Screening
 
 [![R package version](https://img.shields.io/badge/Version-0.2.0-blue.svg)](https://github.com/Wang-Fanchen/FOCUS)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -10,7 +10,7 @@
 
 ## 📖 Overview
 
-**FOCUS** (Feature-Oriented Cytoband Unveiling System) is designed for researchers working with **multimodal machine learning models** that integrate gene expression and imaging data (e.g., histopathology images). 
+**FOCUS** (Feature-Oriented Cytoband Universal Screening) is designed for researchers working with **multimodal machine learning models** that integrate gene expression and imaging data (e.g., histopathology images). 
 
 The package helps answer a critical question:
 
